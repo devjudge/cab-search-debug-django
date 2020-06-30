@@ -1,4 +1,4 @@
-FROM python:3.5-slim
+FROM python:3.7-slim
 
 EXPOSE 8080
 
@@ -19,7 +19,7 @@ RUN if [ $workspace = "theia" ] ; then \
 	wget https://codejudge-starter-repo-artifacts.s3.ap-south-1.amazonaws.com/theia/build.sh \
     && chmod 775 ./build.sh && sh build.sh ; fi
 
-# End Install for Workspace  
+# End Install for Workspace 
 
 RUN mkdir -p /var/app
 
